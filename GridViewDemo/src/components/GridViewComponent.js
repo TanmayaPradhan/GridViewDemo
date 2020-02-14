@@ -19,7 +19,7 @@ import GridViewCell from './subviews/GridViewCell';
 var numOfRows = 2
 var numOfColumns = 0
 var margin = 10
-class componentName extends Component {
+class GridViewComponent extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -87,4 +87,4 @@ const styles = StyleSheet.create({
   SAFEAREA: { flex: 1, backgroundColor: "#fff", },
   CONTAINER: { flex: 1, backgroundColor: "transparent", },
 })
-export default componentName
+export default GridViewComponent
