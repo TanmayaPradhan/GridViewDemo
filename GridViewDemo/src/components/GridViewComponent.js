@@ -40,13 +40,14 @@ class componentName extends Component {
       itemList: arr
     })
   }
-  find_dimesions(layout) {
+  func_findDimensions(layout) {
     const { x, y, width, height } = layout;
     if (this.state.itemListLength % 2 == 0) {
       numOfColumns = this.state.itemListLength / 2;
     }
     else {
-      numOfColumns = (this.state.itemListLength - 1) / 2;
+      numOfColumns = (this.state.itemListLength + 1) / 2;
+      
     }
 
     let verticalMarginTobeDeducted = (numOfRows + 1) * margin
@@ -56,13 +57,14 @@ class componentName extends Component {
       cellHeight: (height - verticalMarginTobeDeducted) / numOfRows,
     })
   }
+  
   render() {
     return (
       <SafeAreaView style={styles.SAFEAREA}>
 
 
         <View style={styles.CONTAINER}
-          onLayout={(event) => { this.find_dimesions(event.nativeEvent.layout) }}
+          onLayout={(event) => { this.func_findDimensions(event.nativeEvent.layout) }}
         >
           {
             numOfColumns == 0 ? null :
