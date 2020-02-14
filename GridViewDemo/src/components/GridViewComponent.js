@@ -15,6 +15,7 @@ import React, { Component } from 'react'
 import { SafeAreaView, View, StyleSheet, FlatList } from 'react-native';
 import GridViewCell from './subviews/GridViewCell';
 
+
 var numOfRows = 2
 var numOfColumns = 0
 var margin = 10
@@ -24,7 +25,7 @@ class componentName extends Component {
     this.state = {
       cellWidth: 0,
       cellHeight: 0,
-      itemListLength: 10,
+      itemListLength: 6,
       itemList: [],
     }
 
@@ -32,7 +33,7 @@ class componentName extends Component {
 
   componentDidMount() {
     let arr = []
-    for (let i = 0; i < this.state.itemListLength; i++) {
+    for (let i = 1; i <= this.state.itemListLength; i++) {
       arr.push(i)
     }
     this.setState({
@@ -56,7 +57,6 @@ class componentName extends Component {
     })
   }
   render() {
-
     return (
       <SafeAreaView style={styles.SAFEAREA}>
 
